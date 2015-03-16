@@ -1,13 +1,14 @@
 package app.com.dm.android.listviewlibros;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 
 /**
- * Created by Max_Sandoval on 12/03/2015.
+ * Created by Max_Sandoval on 14/03/2015.
  */
-public class libro {
+public class Libro extends ActionBarActivity {
 
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreat(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_libro);
     }

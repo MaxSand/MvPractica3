@@ -18,9 +18,16 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         listView = (ListView) findViewById(R.id.list);
-        String[] values = new String[] { "Mobile apps whit Xamarin", "CUDA by example", "Probabilidad y estadistica",
-                "Libro negro del Programador", "El gran libro de Android", "Programacion avanzada Android", "Como Programar en JAVA 7ma",
-                "Como Programar en JAVA 9na","Imagen Cool","Como Programar en C++ 7ma"};
+        String[] values = new String[] {"1.Mobile apps whit Xamarin",
+                                        "2.CUDA by example",
+                                        "3.Probabilidad y estadistica",
+                                        "4.Libro negro del Programador",
+                                        "5.El gran libro de Android",
+                                        "6.Programacion avanzada Android",
+                                        "7.Como Programar en JAVA 7ma",
+                                        "8.Como Programar en JAVA 9na",
+                                        "9.Imagen Cool",
+                                        "10.Como Programar en C++ 7ma"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, values);
@@ -38,8 +45,6 @@ public class MainActivity extends ActionBarActivity {
                 // Show Alert
                 Toast.makeText(getApplicationContext(),
                         "Posición :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG).show();
-
-                
 
             }
         });

@@ -1,5 +1,6 @@
 package app.com.dm.android.listviewlibros;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -37,14 +38,17 @@ public class MainActivity extends ActionBarActivity {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
                 int itemPosition     = position;
                 String  itemValue    = (String) listView.getItemAtPosition(position);
 
                 // Show Alert
-                Toast.makeText(getApplicationContext(),
-                        "Posición :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Posición :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG).show();
+
+                Intent myIntent = new Intent(MainActivity.this, Nueva.class);
+                myIntent.putExtra("posicion",position);
+                MainActivity.this.startActivity(myIntent);
+
 
             }
         });
